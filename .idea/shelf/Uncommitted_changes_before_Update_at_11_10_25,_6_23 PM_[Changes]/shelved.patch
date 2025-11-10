@@ -1,0 +1,110 @@
+Index: server/internal/database/db.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package database\n\nimport (\n\t\"database/sql\"\n\t\"fmt\"\n\t\"log\"\n\n\t\"gtihub.com/eyobcode/event-hive/internal/config\"\n)\n\nfunc ConnectDB() *sql.DB {\n\tcfg := config.LoadConfig()\n\n\tconnStr := fmt.Sprintf(\n\t\t\"postgres://%s:%s@%s:%s/%s?sslmode=disable\",\n\t\tcfg.Database.User,\n\t\tcfg.Database.Pass,\n\t\tcfg.Database.Host,\n\t\tcfg.Database.Port,\n\t\tcfg.Database.Name,\n\t)\n\n\tdb, err := sql.Open(\"postgres\", connStr)\n\tif err != nil {\n\t\tlog.Fatal(\"❌ Failed to connect to database:\", err)\n\t}\n\n\terr = db.Ping()\n\tif err != nil {\n\t\tlog.Fatal(\"❌ Database unreachable:\", err)\n\t}\n\n\tlog.Println(\"✅ Connected to PostgreSQL\")\n\treturn db\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/internal/database/db.go b/server/internal/database/db.go
+--- a/server/internal/database/db.go	(revision 03d3e6d0a9b8d75919f39090345f2d8ccd196d86)
++++ b/server/internal/database/db.go	(date 1762787463456)
+@@ -5,7 +5,7 @@
+ 	"fmt"
+ 	"log"
+ 
+-	"gtihub.com/eyobcode/event-hive/internal/config"
++	"github.com/eyobcode/event-hive/internal/config"
+ )
+ 
+ func ConnectDB() *sql.DB {
+Index: server/cmd/migrate/main.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/cmd/migrate/main.go b/server/cmd/migrate/main.go
+new file mode 100644
+--- /dev/null	(date 1762787379649)
++++ b/server/cmd/migrate/main.go	(date 1762787379649)
+@@ -0,0 +1,53 @@
++package main
++
++import (
++	"log"
++	"os"
++
++	"github.com/eyobcode/event-hive/internal/database"
++	"github.com/golang-migrate/migrate"
++	"github.com/golang-migrate/migrate/database/postgres"
++	"github.com/golang-migrate/migrate/source/file"
++)
++
++func main() {
++	if len(os.Args) < 2 {
++		log.Fatal("You must provide 'up' or 'down'")
++	}
++
++	direction := os.Args[1]
++	db := database.ConnectDB()
++	defer db.Close()
++
++	instance, err := postgres.WithInstance(db, &postgres.Config{})
++	if err != nil {
++		log.Fatal(err)
++	}
++
++	fSrc, err := (&file.File{}).Open("cmd/migrate/migrations")
++	if err != nil {
++		log.Fatal(err)
++	}
++
++	m, err := migrate.NewWithInstance("file", fSrc, "postgres", instance)
++	if err != nil {
++		log.Fatal(err)
++	}
++
++	switch direction {
++	case "up":
++		if err := m.Up(); err != nil && err != migrate.ErrNoChange {
++			log.Fatal(err)
++		}
++		log.Println("✅ Migrations applied")
++
++	case "down":
++		if err := m.Down(); err != nil {
++			log.Fatal(err)
++		}
++		log.Println("⬇️  Migration rolled back")
++
++	default:
++		log.Fatal("Unknown direction: use 'up' or 'down'")
++	}
++}
+Index: server/cmd/api/main.go
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/cmd/api/main.go b/server/cmd/api/main.go
+new file mode 100644
+--- /dev/null	(date 1762733457699)
++++ b/server/cmd/api/main.go	(date 1762733457699)
+@@ -0,0 +1,1 @@
++package api
+Index: server/.env
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/server/.env b/server/.env
+new file mode 100644
+--- /dev/null	(date 1762787622922)
++++ b/server/.env	(date 1762787622922)
+@@ -0,0 +1,7 @@
++DB_USER=event_user
++DB_PASS=event_pass
++DB_NAME=event_hive
++DB_HOST=localhost
++DB_PORT=5432
++
++
