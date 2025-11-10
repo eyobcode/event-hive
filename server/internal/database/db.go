@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"log"
 
-	"gtihub.com/eyobcode/event-hive/internal/config"
+	"github.com/eyobcode/event-hive/internal/config"
 )
 
 func ConnectDB() *sql.DB {
