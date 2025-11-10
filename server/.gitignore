@@ -1,0 +1,7 @@
+/vendor/*/bin/
+
+.idea/
+
+.env
+
+.air.toml
