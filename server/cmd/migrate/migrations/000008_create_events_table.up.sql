@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS events (
     id BIGSERIAL PRIMARY KEY,
     organizer_id BIGINT NOT NULL,
-    category_id BIGINT,
+    category_id BIGINT NOT NULL,
     title VARCHAR(255) NOT NULL,
     description TEXT,
     location VARCHAR(255),
