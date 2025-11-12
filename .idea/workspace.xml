@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="migrations">
-      <change afterPath="$PROJECT_DIR$/server/internal/models/attendee.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/catagory.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/event.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/models.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/organizer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/payment.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/review.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/ticket.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/models/user.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/cmd/migrate/migrations/000008_create_events_table.up.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/migrate/migrations/000008_create_events_table.up.sql" afterDir="false" />
+    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="created model for our db table, all migration that created table up">
+      <change afterPath="$PROJECT_DIR$/server/cmd/api/routes.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/cmd/api/server.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/cmd/migrate/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/migrate/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/server/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/server/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/internal/database/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/database/db.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +90,26 @@
       <recent name="$PROJECT_DIR$/server/cmd" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="go build event-hive main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+      <module name="event-hive" />
+      <working_directory value="$PROJECT_DIR$/server" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/../event-hive|$PROJECT_DIR$/server/cmd/api/main.go" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -113,6 +131,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial point" />
     <MESSAGE value="data base configurations" />
@@ -120,7 +149,9 @@
     <MESSAGE value="db" />
     <MESSAGE value="help" />
     <MESSAGE value="migrations" />
-    <option name="LAST_COMMIT_MESSAGE" value="migrations" />
+    <MESSAGE value="created model for our db table" />
+    <MESSAGE value="created model for our db table, all migration that created table up" />
+    <option name="LAST_COMMIT_MESSAGE" value="created model for our db table, all migration that created table up" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

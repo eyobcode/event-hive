@@ -16,7 +16,10 @@ func main() {
 	}
 
 	direction := os.Args[1]
-	db := database.ConnectDB()
+	db, err := database.ConnectDB()
+	if err != nil {
+		log.Fatal("Could not connect to DB:", err)
+	}
 	defer db.Close()
 
 	instance, err := postgres.WithInstance(db, &postgres.Config{})

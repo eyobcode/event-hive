@@ -1,10 +1,49 @@
-/vendor/*/bin/
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+/tmp
+/bin
+/build
+/dist
 
-.idea/*
+# Go workspace file
+go.work
+go.work.sum
 
-.idea
+# Dependency directories (if not using Go modules)
+vendor/
+
+# Go modules files (optional, usually keep go.mod & go.sum)
+# go.mod
+# go.sum
+
+# Logs
+*.log
+*.log.*
+
+# IDE/editor files
 .idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
 
+# OS files
+.DS_Store
+Thumbs.db
+
+# Air temporary files (if using air for hot reload)
+tmp/
+build-errors.log
+
+# Misc
 .env
+
 
 .air.toml
