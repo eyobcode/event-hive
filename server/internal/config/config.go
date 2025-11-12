@@ -5,7 +5,6 @@ import (
 	"strconv"
 
 	"github.com/joho/godotenv"
-	_ "github.com/joho/godotenv/autoload"
 )
 
 type DatabaseConfig struct {
