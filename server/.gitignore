@@ -45,7 +45,6 @@ build-errors.log
 # Misc
 .env
 
-
 .idea/workspace.xml
 
 .air.toml
