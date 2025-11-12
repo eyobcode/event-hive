@@ -5,8 +5,7 @@ CREATE TABLE IF NOT EXISTS tickets (
     price NUMERIC(10,2),
     quantity INTEGER,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
     CONSTRAINT fk_ticket_event
-    FOREIGN KEY (event_id) REFERENCES events(id)
-    ON DELETE CASCADE
+        FOREIGN KEY (event_id) REFERENCES events(id)
+        ON DELETE CASCADE
 );
