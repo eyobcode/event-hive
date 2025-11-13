@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="refactorize">
+    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="event handler">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/internal/models/event.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/models/event.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +146,8 @@
     <MESSAGE value="created model for our db table, all migration that created table up" />
     <MESSAGE value="models + server start" />
     <MESSAGE value="refactorize" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactorize" />
+    <MESSAGE value="event handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="event handler" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
