@@ -1,6 +1,7 @@
 package main
 
 import (
+	"database/sql"
 	"log"
 
 	"github.com/eyobcode/event-hive/internal/config"
@@ -11,6 +12,7 @@ import (
 type application struct {
 	config config.Config
 	models models.Models
+	DB     *sql.DB
 }
 
 func main() {
@@ -31,6 +33,7 @@ func main() {
 	app := &application{
 		config: cfg,
 		models: model,
+		DB:     db,
 	}
 
 	// 5. Start HTTP server
