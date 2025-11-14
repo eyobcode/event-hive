@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/eyobcode/event-hive/internal/handlers"
+	"github.com/eyobcode/event-hive/internal/models"
 	"github.com/gin-gonic/gin"
 )
 
@@ -13,7 +14,9 @@ func (app *application) routes() http.Handler {
 	{
 		event := api.Group("/events")
 		{
-			h := handlers.EventHandler{DB: app.DB}
+			h := handlers.EventHandler{
+				EventModel: &models.EventModel{DB: app.DB},
+			}
 			event.POST("/", h.CreateEvent)
 			event.GET("/", h.GetAllEvents)
 		}
