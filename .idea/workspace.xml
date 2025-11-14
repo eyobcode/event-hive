@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="event handler">
+    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="create a func to inset the event">
+      <change afterPath="$PROJECT_DIR$/server/internal/dto/event_input.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/internal/validators/event_validator.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/internal/models/event.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/models/event.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/cmd/api/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/api/routes.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/server/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +153,8 @@
     <MESSAGE value="models + server start" />
     <MESSAGE value="refactorize" />
     <MESSAGE value="event handler" />
-    <option name="LAST_COMMIT_MESSAGE" value="event handler" />
+    <MESSAGE value="create a func to inset the event" />
+    <option name="LAST_COMMIT_MESSAGE" value="create a func to inset the event" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
