@@ -1,0 +1,7 @@
+ALTER TABLE users
+ADD COLUMN name VARCHAR(255);
+
+ALTER TABLE users
+DROP COLUMN first_name,
+DROP COLUMN last_name,
+DROP COLUMN user_name;

@@ -11,7 +11,8 @@ type UserModel struct {
 
 type User struct {
 	Id           int       `json:"id"`
-	Name         string    `json:"name"`
+	FirstName    string    `json:"first_name"`
+	LastName     string    `json:"last_name"`
 	Email        string    `json:"email"`
 	PasswordHash string    `json:"-"`
 	Role         string    `json:"role"`
