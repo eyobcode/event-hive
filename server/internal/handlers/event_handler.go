@@ -12,9 +12,7 @@ import (
 )
 
 type EventHandler struct {
-	EventModel     *models.EventModel
-	OrganizerModel *models.OrganizerModel
-	CategoryModel  *models.CategoryModel
+	NewModels *models.Models
 }
 
 // CreateEvent handles POST /api/events/
@@ -27,7 +25,7 @@ func (h *EventHandler) CreateEvent(c *gin.Context) {
 		return
 	}
 
-	organizerId, err := h.OrganizerModel.EnsureOrganizer(userId)
+	organizerId, err := h.NewModels.Organizers.EnsureOrganizer(userId)
 	if err != nil {
 		log.Println("Organizer check error:", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "internal server error"})
@@ -48,7 +46,7 @@ func (h *EventHandler) CreateEvent(c *gin.Context) {
 		return
 	}
 
-	existCategory, err := h.CategoryModel.CategoryExist(*input.CategoryId)
+	existCategory, err := h.NewModels.Categories.CategoryExist(*input.CategoryId)
 	if err != nil {
 		log.Println("Category check error:", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "internal server error"})
@@ -69,7 +67,7 @@ func (h *EventHandler) CreateEvent(c *gin.Context) {
 		EndTime:     *input.EndTime,
 	}
 
-	if err := h.EventModel.Insert(event); err != nil {
+	if err := h.NewModels.Events.Insert(event); err != nil {
 		log.Println("DB insert error:", err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to save event"})
 		return
