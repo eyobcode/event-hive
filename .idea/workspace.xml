@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="create a func to inset the event">
-      <change afterPath="$PROJECT_DIR$/server/internal/dto/event_input.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/validators/event_validator.go" afterDir="false" />
+    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="Refactor: change the struct logic little bit">
+      <change afterPath="$PROJECT_DIR$/server/internal/middleware/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/internal/utils/user.go" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/cmd/api/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/api/routes.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/internal/models/catagory.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/models/catagory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/internal/models/organizer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/models/organizer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/server/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,9 +92,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="go build event-hive main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
+    <configuration name="go build event-hive" type="GoApplicationRunConfiguration" factoryName="Go Application" nameIsGenerated="true">
       <module name="event-hive" />
-      <working_directory value="$PROJECT_DIR$/server" />
+      <working_directory value="$PROJECT_DIR$" />
       <EXTENSION ID="net.ashald.envfile">
         <option name="IS_ENABLED" value="false" />
         <option name="IS_SUBST" value="false" />
@@ -105,7 +107,7 @@
       </EXTENSION>
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/../event-hive|$PROJECT_DIR$/server/cmd/api/main.go" />
+      <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
   </component>
@@ -154,7 +156,10 @@
     <MESSAGE value="refactorize" />
     <MESSAGE value="event handler" />
     <MESSAGE value="create a func to inset the event" />
-    <option name="LAST_COMMIT_MESSAGE" value="create a func to inset the event" />
+    <MESSAGE value="event field validator" />
+    <MESSAGE value="event input field" />
+    <MESSAGE value="Refactor: change the struct logic little bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor: change the struct logic little bit" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
