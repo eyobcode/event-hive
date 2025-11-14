@@ -15,7 +15,9 @@ func (app *application) routes() http.Handler {
 		event := api.Group("/events")
 		{
 			h := handlers.EventHandler{
-				EventModel: &models.EventModel{DB: app.DB},
+				EventModel:     &models.EventModel{DB: app.DB},
+				OrganizerModel: &models.OrganizerModel{DB: app.DB},
+				CategoryModel:  &models.CategoryModel{DB: app.DB},
 			}
 			event.POST("/", h.CreateEvent)
 			event.GET("/", h.GetAllEvents)
