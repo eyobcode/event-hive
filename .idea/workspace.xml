@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="Refactor: change the struct logic little bit">
-      <change afterPath="$PROJECT_DIR$/server/internal/middleware/auth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/internal/utils/user.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
+    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="completed the event creator handler or logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/cmd/api/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/api/routes.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/internal/models/catagory.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/models/catagory.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/internal/models/organizer.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/models/organizer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/server/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +153,12 @@
     <MESSAGE value="event field validator" />
     <MESSAGE value="event input field" />
     <MESSAGE value="Refactor: change the struct logic little bit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor: change the struct logic little bit" />
+    <MESSAGE value="helper for get current user" />
+    <MESSAGE value="error" />
+    <MESSAGE value="middleware" />
+    <MESSAGE value="check if the category exist" />
+    <MESSAGE value="completed the event creator handler or logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed the event creator handler or logic" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
