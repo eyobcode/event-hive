@@ -10,17 +10,17 @@ import (
 
 func (app *application) routes() http.Handler {
 	router := gin.Default()
+	m := models.NewModels(app.DB)
+
 	api := router.Group("/api")
 	{
 		event := api.Group("/events")
 		{
-			m := models.NewModels(app.DB)
-			h := handlers.EventHandler{
-				NewModels: &m,
-			}
+			h := handlers.EventHandler{NewModels: &m}
 			event.POST("/", h.CreateEvent)
 			event.GET("/", h.GetAllEvents)
 		}
+
 	}
 
 	return router
