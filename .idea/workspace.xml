@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="completed the event creator handler or logic">
+    <list default="true" id="fb392733-2247-4c8f-b2b4-9a7720c90024" name="Changes" comment="Refactor: the struct logic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/cmd/api/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/cmd/api/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/internal/handlers/event_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/server/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +156,9 @@
     <MESSAGE value="middleware" />
     <MESSAGE value="check if the category exist" />
     <MESSAGE value="completed the event creator handler or logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="completed the event creator handler or logic" />
+    <MESSAGE value="we applyed to add new feature for user table" />
+    <MESSAGE value="Refactor: the struct logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor: the struct logic" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
